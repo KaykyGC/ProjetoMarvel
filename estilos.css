@@ -1,0 +1,483 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('animate.css');
+@import url('https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap');
+
+ *{ margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Marvel', sans-serif;
+
+ }
+ :root{
+	 --cor-fundo:rgb(237, 29, 36);
+ }
+
+  
+body{
+	background-color: black;
+	overflow-x: hidden;
+	color: white;
+	height: 100%;
+}
+  /*menu*/ 
+.menu-total {
+    background: var(--cor-fundo);
+	margin: 0 auto;
+}
+
+.menu-total .linha {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+}
+.menu-total .linha li{
+	display: inline;
+	position: relative;
+}
+.menu-total .linha li a{
+	color:#FFF;
+	padding: 20px;
+	font-size:20px;
+	text-decoration: none;
+	display: inline-block;
+	transition: background .3s;
+}
+.menu-total .linha ul li a:hover{
+	position: relative;
+	color:black;
+	background-color:whitesmoke;
+	border-radius: 10px;
+
+}
+.menu-total .linha .item{
+	align-content: center;
+}
+
+/*sub menu*/
+
+.menu-total .linha ul ul{
+	display: none;
+	position: absolute;
+	left:0;
+}
+
+.menu-total .linha ul li:hover>ul  {
+	display: block;
+	background-color: var(--cor-fundo);
+	border: 3px solid #FFF;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+
+}
+
+
+.menu-total .linha ul ul{
+	
+	width:200px;
+}
+
+.menu-total .linha ul ul li a{
+	display: block;
+}
+
+/*meio*/
+
+.conteudo{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.conteudoposter1{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	width: 1900px;
+	height: 512px;
+	padding-top: 40px;
+}
+
+.conteudoposter2{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	width: 1900px;
+	height: 512px;
+	padding-top: 40px;
+}
+
+.conteudoposter3{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	width: 1900px;
+	height: 512px;
+	padding-top: 40px;
+}
+
+.conteudoposter4{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	width: 1900px;
+	height: 512px;
+	padding-top: 40px;
+}
+
+.conteudoposter5{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	width: 1900px;
+	height: 512px;
+	padding-top: 40px;
+}
+
+
+
+ .area{
+	 display: flex;
+	 width: 100%;
+	 justify-content:space-around;
+ }
+
+ .areaposter{
+	display: flex;
+	
+	width: 100%;
+	justify-content:space-around;
+}
+
+ .single-team{
+	 width:940px;
+	 height: 600px;
+	 padding: 24px;
+	 background: #FFF;
+	 position: relative;
+	 display:flex;
+	 align-items: flex-end;
+	 transition: 6s ease-out;
+	 box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+	
+ }
+
+ .single-teamposter{
+	
+	width: 360px;
+	height: 512px;
+	padding: 24px;
+	background: #FFF;
+	position: relative;
+	display:flex;
+	align-items: flex-end;
+	transition: 6s ease-out;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+   
+}
+
+ .single-team:hover{
+	 transform: translateY(15px);
+ }
+
+ .single-teamposter:hover{
+	transform: translateY(15px);
+}
+
+ .single-team:hover:before{
+	 opacity: 1;
+ }
+
+ .single-teamposter:hover:before{
+	opacity: 1;
+}
+ .single-team:hover .team-text{
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.single-teamposter:hover .team-text{
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.single-team:before{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, #000, transparent);
+	z-index: 2;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.single-teamposter:before{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, #000, transparent);
+	z-index: 2;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+
+.single-team img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+
+.single-teamposter img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+
+
+.single-team .team-text{
+	position: relative;
+	z-index: 3;
+	color: #FFF;
+	opacity: 0;
+	transform: translateY(60px);
+	transition: 1s;
+}
+
+.single-teamposter .team-text{
+	position: relative;
+	z-index: 3;
+	color: #FFF;
+	opacity: 0;
+	transform: translateY(60px);
+	transition: 1s;
+}
+
+.team-text a{
+	color: #FFF;
+	text-decoration: none;
+
+}
+
+.corpo{
+	width: 100%;
+	padding: 50px;
+	margin: auto;
+}
+
+
+.texto{
+	display: table-cell;
+	float: left;
+	width: 800px;
+	font-size: 22px;
+	padding: 10px;
+	animation-name:fadeIn;
+	animation-duration: 3s;
+
+}
+
+.imagem{
+	padding-top: 50px;
+	display: table-cell;
+	float: left;
+	animation-name:fadeIn;
+	animation-duration: 3s;
+}
+
+h1{
+	animation-name:fadeIn;
+	animation-duration: 2.5s;
+	font-size: 40px;
+	padding: 10px;
+}
+
+h2{
+	animation-name:fadeIn;
+	animation-duration: 2.5s;
+	font-size: 30px;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+p{
+	padding: 30px;
+}
+
+.embreve{
+	text-align: center;
+	font-size: 60px;
+}
+
+
+
+
+
+.rodape{
+	animation-name:fadeIn;
+	animation-duration: 4.5s;
+	position: absolute;
+    background: var(--cor-fundo);
+	margin: 0 auto; 
+	width: 100%;
+    height: 65px;
+    left: 0;
+}
+
+.linhameio{
+	animation-name:fadeIn;
+	animation-duration: 3s;
+	position: absolute;
+    background: var(--cor-fundo);
+	margin: 0 auto; 
+	width: 100%;
+    height: 3px;
+    left: 0;
+	border: 3px solid #fff;
+}
+
+/* animações scroll */
+
+[data-anima]{
+	opacity: 0;
+	transition: .5s;
+}
+
+[data-anima="esquerda"]{
+	transform: translate3d(500px, 0, 0);/* x y z*/
+}
+
+[data-anima="direita"]{
+	transform: translate3d(-500px, 0, 0);/* x y z*/
+}
+
+[data-anima].animacao{
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}
+
+.animeset{
+	width:20px;
+	animation: is-bouncing 1s ease alternate infinite;
+
+}
+
+@keyframes is-bouncing {
+	to{
+		transform: translateY(30px);
+	}
+}
+
+
+.slide{
+		overflow:hidden;
+		height: 350px;
+		width: 270px;
+		margin-left:-1px;
+
+	}
+	 .slide figure div{
+		 float: left;
+		 width: 20%;
+		  
+
+	 }
+	  .slide figure img{
+			width: 10%;
+			float: left;
+
+
+	  }
+	   .slide figure{
+		   position: relative;
+		   width: 500%;
+		   margin: 0px;
+		   left: 0;
+		   animation: 30s slide infinite ;
+
+	   }
+		@keyframes slide{
+			0%{
+			  left: 0%;
+			}
+			10%{
+			 left: 0%;
+			}
+			12%{
+			  left: -100%;
+			}
+			22%{
+			  left: -100%;
+			}
+			24%{
+			  left: -200%;
+			}
+			34%{
+			   left: -200%;
+			}
+			36%{
+			   left: -300%;
+			}
+			46%{
+			   left: -300%;
+			}
+			48%{
+			  left: -400%;
+			}
+			58%{
+			  left: -400%;
+			}
+			60%{
+			  left: -300%;
+			}
+			70%{
+			  left: -300%;
+			}
+			72%{
+			  left: -200%;
+			}
+			82%{
+			  left: -200%;
+			}
+			84%{
+			  left: -100%;
+			}
+			94%{
+			 left: -100%;
+			}
+			96%{
+			  left: 0%;
+			}
+		   98%{
+			   left:0%;
+		   }
+	   100%{
+			  left: -100%;
+			}
+	
+}
+
+@keyframes anima1{
+	from{left:-280px}
+	to{left:0px}
+}
